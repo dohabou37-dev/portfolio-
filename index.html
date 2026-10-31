@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f6f1" />
+    <meta name="description" content="Bouakba Doha is an online business manager, academic researcher, and founder of Vinimage, a vintage digital camera shop." />
+    <title>Bouakba Doha — Business Manager & Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f4f6f1;
+        --ink: #1d2923;
+        --muted: #64716a;
+        --line: #dce2da;
+        --coral: #e9674f;
+        --mint: #c9e6d6;
+        --yellow: #f0cb62;
+        --serif: "DM Serif Display", Georgia, serif;
+        --sans: "DM Sans", sans-serif;
+        --page: 1160px;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; text-decoration: none; }
+      button { color: inherit; font: inherit; }
+      img { display: block; max-width: 100%; }
+      .wrap { width: min(var(--page), calc(100% - 64px)); margin-inline: auto; }
+
+      .topbar { height: 82px; display: flex; align-items: center; border-bottom: 1px solid var(--line); }
+      .nav { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+      .brand-mark { width: 34px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; color: var(--paper); background: var(--ink); font-family: var(--serif); font-size: 19px; font-weight: 400; }
+      .brand span:last-child { line-height: 1.15; }
+      .brand small { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; font-weight: 600; letter-spacing: .14em; }
+      .nav-links { display: flex; align-items: center; gap: 34px; font-size: 13px; font-weight: 600; }
+      .nav-links a:not(.nav-cta) { transition: color .2s ease; }
+      .nav-links a:not(.nav-cta):hover { color: var(--coral); }
+      .nav-cta { padding: 11px 17px; border: 1px solid var(--ink); border-radius: 3px; transition: background .2s, color .2s; }
+      .nav-cta:hover { color: var(--paper); background: var(--ink); }
+
+      .hero { display: grid; grid-template-columns: 1.07fr .93fr; align-items: center; gap: 76px; min-height: 610px; padding-block: 74px 84px; }
+      .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 24px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+      .eyebrow::before { width: 23px; height: 2px; content: ""; background: var(--coral); }
+      h1 { max-width: 630px; margin: 0; font-size: 76px; font-weight: 500; letter-spacing: 0; line-height: .99; }
+      h1 em { color: var(--coral); font-family: var(--serif); font-weight: 400; }
+      .hero-copy { max-width: 430px; margin: 25px 0 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
+      .hero-actions { display: flex; align-items: center; gap: 24px; margin-top: 30px; }
+      .button { display: inline-flex; align-items: center; gap: 18px; min-height: 48px; padding: 0 18px; border-radius: 3px; background: var(--ink); color: var(--paper); font-size: 12px; font-weight: 700; transition: transform .2s, background .2s; }
+      .button:hover { transform: translateY(-2px); background: var(--coral); }
+      .text-link { font-size: 12px; font-weight: 700; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
+      .hero-art { position: relative; min-height: 402px; display: grid; place-items: center; }
+      .hero-photo { position: absolute; inset: 20px 34px 20px 54px; overflow: hidden; border-radius: 3px; background: var(--mint); }
+      .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+      .hero-label { position: absolute; left: 0; top: 52px; display: grid; place-content: center; width: 108px; aspect-ratio: 1; border-radius: 50%; background: var(--yellow); color: var(--ink); text-align: center; transform: rotate(-9deg); }
+      .hero-label strong { font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1; }
+      .hero-label span { margin-top: 5px; font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+      .hero-caption { position: absolute; right: 0; bottom: 0; width: 214px; padding: 15px 17px; background: var(--paper); border: 1px solid var(--line); }
+      .hero-caption small { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+      .hero-caption p { margin: 6px 0 0; font-family: var(--serif); font-size: 18px; }
+
+      .section-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 34px; }
+      .section-head .eyebrow { margin-bottom: 12px; }
+      h2 { margin: 0; font-size: 42px; font-weight: 500; letter-spacing: 0; line-height: 1.12; }
+      .section-note { max-width: 280px; margin: 0 0 4px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+      .work { padding-block: 82px 100px; border-top: 1px solid var(--line); }
+      .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 54px 26px; }
+      .project { min-width: 0; }
+      .project-visual { position: relative; display: block; aspect-ratio: 1.38; overflow: hidden; background: var(--mint); }
+      .project-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+      .project:hover .project-visual img { transform: scale(1.035); }
+      .project:nth-child(2) .project-visual { background: #e5bcb1; }
+      .project:nth-child(3) .project-visual { background: #d5d9bb; }
+      .project:nth-child(3) { grid-column: 1 / -1; }
+      .project:nth-child(3) .project-visual { aspect-ratio: 2.15; }
+      .project-stamp { position: absolute; top: 16px; left: 16px; padding: 8px 11px; background: var(--paper); color: var(--ink); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+      .project-open { position: absolute; right: 16px; bottom: 16px; display: grid; place-items: center; width: 42px; aspect-ratio: 1; border: 0; border-radius: 50%; background: var(--paper); font-size: 20px; cursor: pointer; transition: color .2s, background .2s, transform .2s; }
+      .project-open:hover { transform: rotate(45deg); color: var(--paper); background: var(--coral); }
+      .project-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-top: 15px; }
+      .project-meta h3 { margin: 0; font-family: var(--serif); font-size: 25px; font-weight: 400; }
+      .project-meta span { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+      .project-description { margin: 7px 0 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+
+      .about { padding-block: 94px; background: var(--mint); }
+      .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; align-items: start; }
+      .about-aside { position: sticky; top: 32px; }
+      .about-aside .eyebrow { color: #53665b; }
+      .about-aside h2 { max-width: 330px; font-family: var(--serif); font-size: 45px; font-weight: 400; }
+      .about-copy { max-width: 590px; }
+      .about-copy > p { margin: 0 0 20px; color: #43564a; font-size: 16px; line-height: 1.85; }
+      .about-copy > p strong { color: var(--ink); font-weight: 700; }
+      .skill-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 29px; }
+      .skill-list span { padding: 9px 12px; border: 1px solid #9bb9a7; border-radius: 2px; font-size: 11px; font-weight: 600; }
+
+      .contact { padding-block: 96px 70px; }
+      .contact-inner { display: flex; align-items: end; justify-content: space-between; gap: 40px; padding-bottom: 65px; border-bottom: 1px solid var(--line); }
+      .contact .eyebrow { margin-bottom: 18px; }
+      .contact h2 { max-width: 640px; font-size: 62px; line-height: 1.02; }
+      .contact h2 em { color: var(--coral); font-family: var(--serif); font-weight: 400; }
+      .contact-action { flex: 0 0 auto; margin-bottom: 4px; }
+      footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 24px; color: var(--muted); font-size: 11px; }
+      .socials { display: flex; gap: 20px; }
+      .socials a { color: var(--ink); font-weight: 600; }
+      .socials a:hover { color: var(--coral); }
+
+      dialog { width: min(540px, calc(100% - 32px)); padding: 0; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); color: var(--ink); box-shadow: 0 24px 80px #1d292333; }
+      dialog::backdrop { background: #1d292377; backdrop-filter: blur(3px); }
+      .dialog-content { padding: 32px; }
+      .dialog-top { display: flex; justify-content: space-between; align-items: start; gap: 20px; }
+      .dialog-top .eyebrow { margin-bottom: 14px; }
+      .dialog-top h2 { font-family: var(--serif); font-size: 34px; }
+      .dialog-close { display: grid; place-items: center; width: 34px; aspect-ratio: 1; border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; font-size: 18px; }
+      .dialog-content > p { color: var(--muted); font-size: 14px; line-height: 1.75; }
+      .dialog-content .dialog-kind { margin-top: 24px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--coral); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+
+      @media (max-width: 800px) {
+        .wrap { width: min(var(--page), calc(100% - 40px)); }
+        .hero { gap: 34px; min-height: auto; padding-block: 68px; }
+        h1 { font-size: 59px; }
+        .hero-art { min-height: 330px; }
+        .hero-photo { inset: 20px 20px 18px 36px; }
+        .hero-label { width: 86px; }
+        .hero-label strong { font-size: 18px; }
+        .about-grid { gap: 46px; }
+        .contact h2 { font-size: 50px; }
+      }
+      @media (max-width: 600px) {
+        html { scroll-padding-top: 72px; }
+        .wrap { width: calc(100% - 36px); }
+        .topbar { height: 70px; }
+        .brand { font-size: 12px; }
+        .nav-links { gap: 15px; font-size: 11px; }
+        .nav-links .nav-cta { padding: 9px 11px; }
+        .nav-links a:nth-child(2) { display: none; }
+        .hero { grid-template-columns: 1fr; gap: 30px; padding-block: 60px 62px; }
+        h1 { max-width: 470px; font-size: 57px; }
+        .hero-copy { margin-top: 20px; font-size: 14px; }
+        .hero-art { min-height: 330px; }
+        .hero-photo { inset: 14px 28px 16px 38px; }
+        .hero-label { top: 32px; left: 0; }
+        .hero-caption { right: 0; bottom: 0; }
+        .work { padding-block: 67px 76px; }
+        .section-head { align-items: start; flex-direction: column; gap: 13px; margin-bottom: 25px; }
+        h2 { font-size: 36px; }
+        .section-note { max-width: 340px; }
+        .projects { grid-template-columns: 1fr; gap: 34px; }
+        .project:nth-child(3) { grid-column: auto; }
+        .project:nth-child(3) .project-visual { aspect-ratio: 1.38; }
+        .project-meta h3 { font-size: 23px; }
+        .about { padding-block: 70px; }
+        .about-grid { grid-template-columns: 1fr; gap: 25px; }
+        .about-aside { position: static; }
+        .about-aside h2 { font-size: 39px; }
+        .about-copy > p { font-size: 14px; }
+        .contact { padding-block: 72px 32px; }
+        .contact-inner { align-items: start; flex-direction: column; gap: 25px; padding-bottom: 42px; }
+        .contact h2 { font-size: 46px; }
+        footer { align-items: start; flex-direction: column; gap: 15px; padding-top: 20px; }
+        .dialog-content { padding: 24px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Bouakba Doha, home">
+          <span class="brand-mark" aria-hidden="true">BD</span>
+            <span>BOUAKBA DOHA<small>BUSINESS · RESEARCH · VINIMAGE</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-content">
+            <p class="eyebrow">Online business manager · academic researcher</p>
+            <h1 id="hero-title">Business, research &amp; a love for <em>vintage cameras.</em></h1>
+            <p class="hero-copy">I'm Bouakba Doha. I manage online business operations, have a background in English linguistics and academic research, and run Vinimage, my vintage digital camera page.</p>
+          <div class="hero-actions">
+            <a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#about">More about me</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="A vintage digital camera">
+          <div class="hero-photo"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1100&q=85" alt="Camera ready to capture a moment" /></div>
+          <div class="hero-label" aria-hidden="true"><strong>Vintage<br />digital</strong><span>camera finds</span></div>
+          <div class="hero-caption"><small>My camera page</small><p>Find me at Vinimage.</p></div>
+        </div>
+      </section>
+
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div><p class="eyebrow">Business · research · cameras</p><h2 id="work-title">What I do</h2></div>
+              <p class="section-note">A mix of online business management, academic research, and running my vintage camera page, Vinimage.</p>
+          </div>
+          <div class="projects">
+              <article class="project" id="vinimage">
+                <button class="project-visual" type="button" data-project="vinimage" aria-label="Read about Vinimage, my vintage digital camera page">
+                  <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=85" alt="Camera used for digital photography" loading="lazy" />
+                  <span class="project-stamp">My business</span><span class="project-open" aria-hidden="true">↗</span>
+              </button>
+              <div class="project-meta"><h3>Vinimage</h3><span>Vintage cameras</span></div>
+              <p class="project-description">My page dedicated to selling vintage digital cameras to people who love a little character in their photos.</p>
+            </article>
+            <article class="project">
+              <button class="project-visual" type="button" data-project="business" aria-label="Read about my online business management work">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85" alt="Laptop and workspace for online work" loading="lazy" />
+                <span class="project-stamp">Professional work</span><span class="project-open" aria-hidden="true">↗</span>
+              </button>
+              <div class="project-meta"><h3>Online business management</h3><span>Operations</span></div>
+              <p class="project-description">I work as an online business manager, helping businesses stay organized and keeping their day-to-day work moving.</p>
+            </article>
+            <article class="project">
+              <button class="project-visual" type="button" data-project="research" aria-label="Read about my academic research experience">
+                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=85" alt="Notebook and pen on a researcher's desk" loading="lazy" />
+                <span class="project-stamp">Academic experience</span><span class="project-open" aria-hidden="true">↗</span>
+              </button>
+              <div class="project-meta"><h3>Academic research</h3><span>English linguistics</span></div>
+              <p class="project-description">I have also worked as a researcher in the academic field, building on my studies in English linguistics.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-grid wrap">
+          <div class="about-aside"><p class="eyebrow">A little about me</p><h2 id="about-title">Language, business &amp; curiosity.</h2></div>
+          <div class="about-copy">
+            <p>I'm <strong>Bouakba Doha</strong>, an online business manager with a Master 2 in English Linguistics.</p>
+            <p>Alongside managing online business work, I've worked as a researcher in the academic field. I also own <strong>Vinimage</strong>, a page where I sell vintage digital cameras.</p>
+            <p>I'm interested in the way people communicate, how businesses work behind the scenes, and the stories we keep through photography.</p>
+            <p><strong>Born:</strong> 26 November 2002</p>
+            <div class="skill-list" aria-label="Areas of experience"><span>Online business management</span><span>English linguistics</span><span>Academic research</span><span>Vintage digital cameras</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact wrap" id="contact" aria-labelledby="contact-title">
+        <div class="contact-inner">
+          <div><p class="eyebrow">Get in touch</p><h2 id="contact-title">Let's start a <em>conversation.</em></h2></div>
+          <div class="hero-actions contact-action">
+            <a class="button" href="mailto:dohabouakba3@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://wa.me/213559875361" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+        </div>
+        <footer>
+          <span>© <span id="year"></span> Bouakba Doha</span>
+          <div class="socials"><a href="mailto:dohabouakba3@gmail.com">dohabouakba3@gmail.com</a><a href="https://wa.me/213559875361" target="_blank" rel="noreferrer">WhatsApp ↗</a></div>
+        </footer>
+      </section>
+    </main>
+
+    <dialog aria-labelledby="dialog-title">
+      <div class="dialog-content">
+        <div class="dialog-top"><div><p class="eyebrow">About my work</p><h2 id="dialog-title"></h2></div><button class="dialog-close" type="button" aria-label="Close details">×</button></div>
+        <p id="dialog-description"></p>
+        <p class="dialog-kind">Bouakba Doha · Business · Research · Vinimage</p>
+      </div>
+    </dialog>
+
+    <script>
+      const projectDetails = {
+        vinimage: { title: "Vinimage", description: "Vinimage is my page for selling vintage digital cameras. It brings together my interest in cameras and helping people discover a different kind of digital photography." },
+        business: { title: "Online business management", description: "I work as an online business manager, supporting the organization and day-to-day operations of online businesses." },
+        research: { title: "Academic research", description: "I have worked as a researcher in the academic field and hold a Master 2 in English Linguistics." }
+      };
+      const dialog = document.querySelector("dialog");
+      document.querySelectorAll("[data-project]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const project = projectDetails[button.dataset.project];
+          document.querySelector("#dialog-title").textContent = project.title;
+          document.querySelector("#dialog-description").textContent = project.description;
+          dialog.showModal();
+        });
+      });
+      document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
